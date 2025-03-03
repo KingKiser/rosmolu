@@ -1,0 +1,9 @@
+# Goal
+# Empty since the client doesn't need to send any data
+---
+# Result
+bool game_over
+bool won
+---
+# Feedback
+bool game_over
