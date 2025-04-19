@@ -19,7 +19,7 @@ class YOLOv8Node(Node):
         self.bridge = CvBridge()
 
         # Load YOLOv8 model
-        self.model = YOLO('/home/rokey/Downloads/yolov8_forros/yolov8n.pt')  # 욜로 로드
+        self.model = YOLO('/home/seonghwi/Downloads/yolov8_forros/yolov8n.pt')  # 욜로 로드
 
     def image_callback(self, msg):
         # Convert ROS Image message to OpenCV image

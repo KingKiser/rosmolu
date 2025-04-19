@@ -50,7 +50,7 @@ class molu(Node):
         self.declare_parameter('pathconfig', 'molu.png')
         self.subscription = self.create_subscription(
             Image, 
-            '/image_raw', 
+            '/image_raw', #topic name
             self.image_callback, 
             10)
         self.img_pub = self.create_publisher(Image, 'molu_yaml', 10)
@@ -66,7 +66,7 @@ class molu(Node):
         cv_img = self.bridge.imgmsg_to_cv2(msg, "bgr8")  # 영상 변환
         mp_face_detection = mp.solutions.face_detection
         mp_drawing = mp.solutions.drawing_utils
-        img_path = '/home/rokey/ros2_ws/src/config/' + self.get_parameter('pathconfig').get_parameter_value().string_value
+        img_path = '/home/seonghwi/ros2_ws/src/config/' + self.get_parameter('pathconfig').get_parameter_value().string_value
         
         overlay_img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)  # PNG 이미지 (투명 배경 지원)
 

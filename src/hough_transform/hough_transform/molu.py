@@ -43,7 +43,7 @@ class Molu(Node):
         cv_img = self.bridge.imgmsg_to_cv2(msg, "bgr8") #영상 넣는 코드
         mp_drawing = mp.solutions.drawing_utils
         mp_face_detection = mp.solutions.face_detection
-        img_path = '/home/rokey/ros2_ws/src/config/' + self.get_parameter('pathconfig').get_parameter_value().string_value
+        img_path = '/home/seonghwi/ros2_ws/src/config/' + self.get_parameter('pathconfig').get_parameter_value().string_value
         #img_path = '/home/rokey/ros2_ws/src/config/20.png'
 
         overlay_img =  cv2.imread(img_path, cv2.IMREAD_UNCHANGED) #이미지 경로 
