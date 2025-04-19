@@ -50,6 +50,15 @@ public:
     }
 
 private:
+
+rclcpp::Publisher<ros_study_msgs::msg::ArithmeticArgument>::SharedPtr publisher_;
+rclcpp::TimerBase::SharedPtr timer_;
+OnSetParametersCallbackHandle::SharedPtr parameter_callback_handle_;
+
+int qos_depth_;
+int min_random_num_;
+int max_random_num_;
+
     void publish_random_message()
     {
         ros_study_msgs::msg::ArithmeticArgument msg;
@@ -96,13 +105,6 @@ private:
         return dis(gen);
     }
 
-    rclcpp::Publisher<ros_study_msgs::msg::ArithmeticArgument>::SharedPtr publisher_;
-    rclcpp::TimerBase::SharedPtr timer_;
-    OnSetParametersCallbackHandle::SharedPtr parameter_callback_handle_;
-
-    int qos_depth_;
-    int min_random_num_;
-    int max_random_num_;
 };
 
 int main(int argc, char *argv[])

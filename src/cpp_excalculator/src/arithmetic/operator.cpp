@@ -54,6 +54,10 @@ public:
     }
 
 private:
+
+rclcpp::Client<ArithmeticOperator>::SharedPtr client_;
+rclcpp::Client<ArithmeticOperator>::SharedFuture future_result_;
+
     void send_request()
     {
         auto request = std::make_shared<ArithmeticOperator::Request>();
@@ -69,8 +73,6 @@ private:
         return dis(gen);
     }
 
-    rclcpp::Client<ArithmeticOperator>::SharedPtr client_;
-    rclcpp::Client<ArithmeticOperator>::SharedFuture future_result_;
 };
 
 int main(int argc, char **argv)
