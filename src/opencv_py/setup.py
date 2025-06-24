@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 import glob
 import os
 
-package_name = "opencv_ros"
+package_name = "opencv_py"
 
 setup(
     name=package_name,
