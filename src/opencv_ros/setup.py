@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 import glob
 import os
 
-package_name = "hough_transform"
+package_name = "opencv_ros"
 
 setup(
     name=package_name,
@@ -13,7 +13,7 @@ setup(
         ("share/" + package_name, ["package.xml"]),
         ('share/' + package_name + '/param', glob.glob(os.path.join('param', '*.yaml'))),
     ],
-    install_requires=["setuptools"],
+    install_requires=["setuptools", 'opencv-python'],
     zip_safe=True,
     maintainer="user",
     maintainer_email="user@todo.todo",
@@ -22,12 +22,15 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            "image_publisher = hough_transform.img_pub:main",
-            "hough_transform = hough_transform.hough_transform:main",
-            "yolo8 = hough_transform.yolo8:main",
-            "personmosaic = hough_transform.personmosaic:main",
-            "molu = hough_transform.molu:main",
-            "moluya = hough_transform.molu_yaml:main",
+            "image_publisher = source.img_pub:main",
+            "hough_transform = source.hough_transform:main",
+            "yolo8 = source.yolo8:main",
+            "personmosaic = source.personmosaic:main",
+            "molu = source.molu:main",
+            "moluya = source.molu_yaml:main",
+            'grayscale = source.grayscale:main',
+            'saveimg = source.saveimg:main',
+            'imageconverter = source.imageconverter:main',
         ],
     },
 )

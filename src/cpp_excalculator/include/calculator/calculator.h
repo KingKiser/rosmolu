@@ -33,8 +33,9 @@ private:
   void execute_checker(const std::shared_ptr<GoalHandleChecker> goal_handle);
 
   // Member Variables
-  float argument_a_, argument_b_, argument_result_;
+  float argument_a_, argument_b_;
   int argument_operator_;
+  float argument_result_;
   std::string argument_formula_;
   std::vector<std::string> operator_;
 

@@ -42,3 +42,6 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+
+#ros2 run your_package imageconverter 30 20 -10

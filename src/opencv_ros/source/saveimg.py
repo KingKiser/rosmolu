@@ -58,3 +58,5 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+#ros2 service call /save_image std_srvs/srv/Empty
