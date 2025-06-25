@@ -1,0 +1,3 @@
+word_service: # namespace and node name
+  ros__parameters:
+    word_list: ["dm", "supersonic", "lovebomb", "fun"]
