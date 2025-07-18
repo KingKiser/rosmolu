@@ -19,6 +19,7 @@ class my_msg_test(Node):
         msg.num = self.i
         self.publisher_.publish(msg)
         self.get_logger().info(str(self.i))
+        #로그를 찍는 함수
         self.i += 1
 
 
