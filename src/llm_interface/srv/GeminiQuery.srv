@@ -1,0 +1,6 @@
+# 요청 (Request)
+string prompt         # AI에게 보낼 질문
+---
+# 응답 (Response)
+bool success          # API 호출 성공 여부
+string response       # AI의 답변 텍스트

@@ -1,0 +1,3 @@
+molu_node: # namespace and node name
+  ros__parameters:
+    pathconfig: "20.png"
